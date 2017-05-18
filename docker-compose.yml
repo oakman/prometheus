@@ -1,9 +1,12 @@
 version: '2'
 
 volumes:
-  prometheus-data: {}
-  grafana-data: {}
-  snmp-exporter: {}
+  prometheus-data:
+    external: true
+  grafana-data:
+    external: true
+  snmp-exporter:
+    external: true
 
 networks:
   front-tier:
